@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "devDependencies": {
+    "sketch-plugin-helper": "*"
+  },
+  "scripts": {
+    "build": "sph build",
+    "fix": "sph lint --fix",
+    "lint": "sph lint",
+    "symlink": "sph symlink",
+    "unlink": "sph symlink --delete",
+    "version": "sph version",
+    "watch": "sph build --watch"
+  },
+  "dependencies": {
+    "natural-compare-lite": "1.4.0"
+  },
+  "sketch-plugin-helper": {
+    "pluginName": "Sort Layer List",
+    "pluginDescription": "A Sketch plugin for sorting the layer list by name or layer position",
+    "authorName": "Lim Yuan Qing",
+    "githubUserName": "yuanqing",
+    "githubRepositoryName": "sketch-sort-layer-list",
+    "menu": [
+      {
+        "handler": "sort-selected-layers-by-name",
+        "label": "Sort Selected Layers By Name"
+      },
+      "-",
+      {
+        "handler": "sort-selected-layers-by-x-position",
+        "label": "Sort Selected Layers By X Position"
+      },
+      {
+        "handler": "sort-selected-layers-by-y-position",
+        "label": "Sort Selected Layers By Y Position"
+      },
+      {
+        "handler": "sort-selected-layers-by-y-and-x-position",
+        "label": "Sort Selected Layers By Y and X Position"
+      }
+    ]
+  }
+}

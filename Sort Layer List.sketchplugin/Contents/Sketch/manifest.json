@@ -1,0 +1,47 @@
+{
+  "name": "Sort Layer List",
+  "description": "A Sketch plugin for sorting the layer list by name or layer position",
+  "author": "Lim Yuan Qing",
+  "homepage": "https://github.com/yuanqing/sketch-sort-layer-list",
+  "version": "0.1.0",
+  "identifier": "yuanqing.sketch-sort-layer-list",
+  "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-sort-layer-list/master/appcast.xml",
+  "bundleVersion": 1,
+  "disableCocoaScriptPreprocessor": true,
+  "commands": [
+    {
+      "name": "Sort Selected Layers By Name",
+      "identifier": "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-name",
+      "script": "plugin.js",
+      "handler": "sort-selected-layers-by-name"
+    },
+    {
+      "name": "Sort Selected Layers By X Position",
+      "identifier": "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-x-position",
+      "script": "plugin.js",
+      "handler": "sort-selected-layers-by-x-position"
+    },
+    {
+      "name": "Sort Selected Layers By Y Position",
+      "identifier": "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-position",
+      "script": "plugin.js",
+      "handler": "sort-selected-layers-by-y-position"
+    },
+    {
+      "name": "Sort Selected Layers By Y and X Position",
+      "identifier": "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-and-x-position",
+      "script": "plugin.js",
+      "handler": "sort-selected-layers-by-y-and-x-position"
+    }
+  ],
+  "menu": {
+    "title": "Sort Layer List",
+    "items": [
+      "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-name",
+      "-",
+      "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-x-position",
+      "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-position",
+      "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-and-x-position"
+    ]
+  }
+}
