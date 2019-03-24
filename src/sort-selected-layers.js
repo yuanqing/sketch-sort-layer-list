@@ -17,13 +17,13 @@ export default function sortSelectedLayers ({ label, sortLayers }) {
     }
     const firstLayer = selectedLayers[0]
     const parent = firstLayer.sketchObject.parentGroup()
-    const tempLayer = MSLayer.alloc().init()
-    parent.insertLayer_beforeLayer(tempLayer, firstLayer.sketchObject)
+    const temporaryLayer = MSLayer.alloc().init()
+    parent.insertLayer_beforeLayer(temporaryLayer, firstLayer.sketchObject)
     selectedLayers.sort(sortLayers).forEach(function (layer) {
       const layerSketchObject = layer.sketchObject
-      layerSketchObject.moveToLayer_beforeLayer(parent, tempLayer)
+      layerSketchObject.moveToLayer_beforeLayer(parent, temporaryLayer)
     })
-    tempLayer.removeFromParent()
+    temporaryLayer.removeFromParent()
     showSuccessMessage(`Sorted layers by ${label}`)
   }
 }
@@ -38,6 +38,6 @@ function areLayersInSameList ([firstLayer, ...layers]) {
     if (firstLayerParent == null) {
       return parent == null
     }
-    return parent.id && parent.id == firstLayerParent.id
+    return parent.id && parent.id === firstLayerParent.id
   }, true)
 }
