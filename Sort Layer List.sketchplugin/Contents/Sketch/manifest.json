@@ -32,6 +32,12 @@
       "identifier": "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-and-x-position",
       "script": "plugin.js",
       "handler": "sort-selected-layers-by-y-and-x-position"
+    },
+    {
+      "name": "Smart Sort",
+      "identifier": "yuanqing.sketch-sort-layer-list.smart-sort",
+      "script": "plugin.js",
+      "handler": "smart-sort"
     }
   ],
   "menu": {
@@ -41,7 +47,9 @@
       "-",
       "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-x-position",
       "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-position",
-      "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-and-x-position"
+      "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-and-x-position",
+      "-",
+      "yuanqing.sketch-sort-layer-list.smart-sort"
     ]
   }
 }

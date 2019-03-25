@@ -15,6 +15,10 @@
   - Y position
   - Y and X position
 
+### Smart Sort
+
+- Layers are sorted by their Y and X position, while preserving their stacking order on the page
+
 ## Installation
 
 1. [Download and unzip the latest release.](https://github.com/yuanqing/sketch-sort-layer-list/releases)

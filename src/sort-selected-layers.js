@@ -4,7 +4,10 @@ import {
   showSuccessMessage
 } from 'sketch-plugin-helper'
 
-export default function sortSelectedLayers ({ label, sortLayers }) {
+import { areLayersInSameList } from './are-layers-in-same-list'
+import { updateLayerList } from './update-layer-list'
+
+export function sortSelectedLayers ({ label, sortLayers }) {
   return function () {
     const selectedLayers = getSelectedLayers().reverse()
     if (selectedLayers < 2) {
@@ -15,29 +18,8 @@ export default function sortSelectedLayers ({ label, sortLayers }) {
       showErrorMessage('Selected layers are not in the same list')
       return
     }
-    const firstLayer = selectedLayers[0]
-    const parent = firstLayer.sketchObject.parentGroup()
-    const temporaryLayer = MSLayer.alloc().init()
-    parent.insertLayer_beforeLayer(temporaryLayer, firstLayer.sketchObject)
-    selectedLayers.sort(sortLayers).forEach(function (layer) {
-      const layerSketchObject = layer.sketchObject
-      layerSketchObject.moveToLayer_beforeLayer(parent, temporaryLayer)
-    })
-    temporaryLayer.removeFromParent()
+    const layers = selectedLayers.sort(sortLayers)
+    updateLayerList(layers)
     showSuccessMessage(`Sorted layers by ${label}`)
   }
-}
-
-function areLayersInSameList ([firstLayer, ...layers]) {
-  const firstLayerParent = firstLayer.parent
-  return layers.reduce(function (result, layer) {
-    if (!result) {
-      return result
-    }
-    const parent = layer.parent
-    if (firstLayerParent == null) {
-      return parent == null
-    }
-    return parent.id && parent.id === firstLayerParent.id
-  }, true)
 }

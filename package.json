@@ -39,6 +39,11 @@
       {
         "handler": "sort-selected-layers-by-y-and-x-position",
         "label": "Sort Selected Layers By Y and X Position"
+      },
+      "-",
+      {
+        "handler": "smart-sort",
+        "label": "Smart Sort"
       }
     ]
   }

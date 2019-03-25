@@ -1,8 +1,8 @@
-import sortSelectedLayers from './sort-selected-layers'
+import { sortSelectedLayers } from './sort-selected-layers'
 
 export default sortSelectedLayers({
   label: 'X position',
-  sortLayers: function (a, b) {
-    return b.frame.x - a.frame.x
+  sortLayers: function (layerA, layerB) {
+    return layerA.frame.x - layerB.frame.x
   }
 })

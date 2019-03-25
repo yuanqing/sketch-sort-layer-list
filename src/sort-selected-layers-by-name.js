@@ -1,6 +1,6 @@
 import naturalCompare from 'natural-compare-lite'
 
-import sortSelectedLayers from './sort-selected-layers'
+import { sortSelectedLayers } from './sort-selected-layers'
 
 export default sortSelectedLayers({
   label: 'name',
