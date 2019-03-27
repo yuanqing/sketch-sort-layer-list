@@ -11,45 +11,45 @@
   "commands": [
     {
       "name": "Sort Selected Layers By Name",
-      "identifier": "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-name",
+      "identifier": "yuanqing.sketch-sort-layer-list.attributes.name",
       "script": "plugin.js",
-      "handler": "sort-selected-layers-by-name"
+      "handler": "attributes/name"
     },
     {
       "name": "Sort Selected Layers By X Position",
-      "identifier": "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-x-position",
+      "identifier": "yuanqing.sketch-sort-layer-list.attributes.x-position",
       "script": "plugin.js",
-      "handler": "sort-selected-layers-by-x-position"
+      "handler": "attributes/x-position"
     },
     {
       "name": "Sort Selected Layers By Y Position",
-      "identifier": "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-position",
+      "identifier": "yuanqing.sketch-sort-layer-list.attributes.y-position",
       "script": "plugin.js",
-      "handler": "sort-selected-layers-by-y-position"
+      "handler": "attributes/y-position"
     },
     {
       "name": "Sort Selected Layers By Y and X Position",
-      "identifier": "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-and-x-position",
+      "identifier": "yuanqing.sketch-sort-layer-list.attributes.y-and-x-position",
       "script": "plugin.js",
-      "handler": "sort-selected-layers-by-y-and-x-position"
+      "handler": "attributes/y-and-x-position"
     },
     {
       "name": "Smart Sort",
-      "identifier": "yuanqing.sketch-sort-layer-list.smart-sort",
+      "identifier": "yuanqing.sketch-sort-layer-list.attributes.smart-sort",
       "script": "plugin.js",
-      "handler": "smart-sort"
+      "handler": "attributes/smart-sort"
     }
   ],
   "menu": {
     "title": "Sort Layer List",
     "items": [
-      "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-name",
+      "yuanqing.sketch-sort-layer-list.attributes.name",
       "-",
-      "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-x-position",
-      "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-position",
-      "yuanqing.sketch-sort-layer-list.sort-selected-layers-by-y-and-x-position",
+      "yuanqing.sketch-sort-layer-list.attributes.x-position",
+      "yuanqing.sketch-sort-layer-list.attributes.y-position",
+      "yuanqing.sketch-sort-layer-list.attributes.y-and-x-position",
       "-",
-      "yuanqing.sketch-sort-layer-list.smart-sort"
+      "yuanqing.sketch-sort-layer-list.attributes.smart-sort"
     ]
   }
 }

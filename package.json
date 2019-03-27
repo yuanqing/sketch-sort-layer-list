@@ -24,25 +24,25 @@
     "githubRepositoryName": "sketch-sort-layer-list",
     "menu": [
       {
-        "handler": "sort-selected-layers-by-name",
+        "handler": "attributes/name",
         "label": "Sort Selected Layers By Name"
       },
       "-",
       {
-        "handler": "sort-selected-layers-by-x-position",
+        "handler": "attributes/x-position",
         "label": "Sort Selected Layers By X Position"
       },
       {
-        "handler": "sort-selected-layers-by-y-position",
+        "handler": "attributes/y-position",
         "label": "Sort Selected Layers By Y Position"
       },
       {
-        "handler": "sort-selected-layers-by-y-and-x-position",
+        "handler": "attributes/y-and-x-position",
         "label": "Sort Selected Layers By Y and X Position"
       },
       "-",
       {
-        "handler": "smart-sort",
+        "handler": "attributes/smart-sort",
         "label": "Smart Sort"
       }
     ]
