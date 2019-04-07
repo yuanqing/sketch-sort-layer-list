@@ -1,6 +1,9 @@
 {
   "private": true,
   "version": "0.2.0",
+  "dependencies": {
+    "natural-compare-lite": "1.4.0"
+  },
   "devDependencies": {
     "sketch-plugin-helper": "*"
   },
@@ -12,9 +15,6 @@
     "unlink": "sph symlink --delete",
     "version": "sph version",
     "watch": "sph build --watch"
-  },
-  "dependencies": {
-    "natural-compare-lite": "1.4.0"
   },
   "sketch-plugin-helper": {
     "pluginName": "Sort Layer List",
