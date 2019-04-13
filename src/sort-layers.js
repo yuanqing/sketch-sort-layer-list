@@ -15,13 +15,13 @@ export function sortLayers ({ sortLayers, successMessage }) {
       showErrorMessage('Selected layers are not in the same list')
       return
     }
-    const layers = sortLayers(selectedLayers)
-    updateLayerList(layers)
+    const sortedLayers = sortLayers(selectedLayers)
+    updateLayerList({sortedLayers, shouldSelectLayers: true})
     showSuccessMessage(successMessage)
   }
 }
 
-function areLayersInSameList ([firstLayer, ...layers]) {
+export function areLayersInSameList ([firstLayer, ...layers]) {
   const firstLayerParent = firstLayer.parent
   return layers.reduce(function (result, layer) {
     if (!result) {
@@ -35,7 +35,7 @@ function areLayersInSameList ([firstLayer, ...layers]) {
   }, true)
 }
 
-function updateLayerList (sortedLayers) {
+export function updateLayerList ({sortedLayers, shouldSelectLayers}) {
   const firstLayer = sortedLayers[0]
   const parent = firstLayer.sketchObject.parentGroup()
   const temporaryLayer = MSLayer.alloc().init()
@@ -43,6 +43,7 @@ function updateLayerList (sortedLayers) {
   sortedLayers.reverse().forEach(function (layer) {
     const layerSketchObject = layer.sketchObject
     layerSketchObject.moveToLayer_beforeLayer(parent, temporaryLayer)
+    layer.selected = shouldSelectLayers
   })
   temporaryLayer.removeFromParent()
 }

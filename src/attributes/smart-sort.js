@@ -6,7 +6,7 @@ export default sortLayers({
   successMessage: 'Smart sorted layers'
 })
 
-function smartSort ([firstLayer, ...layers]) {
+export function smartSort ([firstLayer, ...layers]) {
   const results = [firstLayer]
   layers.forEach(function (layer) {
     let i = results.length
@@ -25,7 +25,7 @@ function smartSort ([firstLayer, ...layers]) {
   return results
 }
 
-function checkIfLayersOverlap (layerA, layerB) {
+export function checkIfLayersOverlap (layerA, layerB) {
   const a = layerA.frame
   const b = layerB.frame
   return !(
