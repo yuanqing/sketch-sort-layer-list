@@ -1,6 +1,15 @@
 {
   "name": "sketch-sort-layer-list",
   "version": "0.2.2",
+  "description": "A Sketch plugin for sorting the layer list by name or layer position",
+  "keywords": [
+    "plugin",
+    "sketch",
+    "sketch-plugin-helper"
+  ],
+  "license": "MIT",
+  "author": "Lim Yuan Qing",
+  "repository": "yuanqing/sketch-sort-layer-list",
   "dependencies": {
     "natural-compare-lite": "1.4.0"
   },
@@ -17,11 +26,7 @@
     "watch": "sph build --watch"
   },
   "sketch-plugin-helper": {
-    "pluginName": "Sort Layer List",
-    "pluginDescription": "A Sketch plugin for sorting the layer list by name or layer position",
-    "authorName": "Lim Yuan Qing",
-    "githubUserName": "yuanqing",
-    "githubRepositoryName": "sketch-sort-layer-list",
+    "name": "Sort Layer List",
     "menu": [
       {
         "handler": "attributes/name",
