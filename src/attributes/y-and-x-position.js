@@ -1,7 +1,7 @@
 import { compareYandXposition } from '../compare-y-and-x-position'
-import { sortLayers } from '../sort-layers'
+import sortLayersFactory from '../sort-layers-factory'
 
-export default sortLayers({
+export default sortLayersFactory({
   sortLayers: compareYandXposition,
   successMessage: 'Sorted layers by Y and X position'
 })

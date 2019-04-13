@@ -1,7 +1,7 @@
 import { compareYandXposition } from '../compare-y-and-x-position'
-import { sortLayers } from '../sort-layers'
+import sortLayersFactory from '../sort-layers-factory'
 
-export default sortLayers({
+export default sortLayersFactory({
   sortLayers: smartSort,
   successMessage: 'Smart sorted layers'
 })
@@ -25,7 +25,7 @@ export function smartSort ([firstLayer, ...layers]) {
   return results
 }
 
-export function checkIfLayersOverlap (layerA, layerB) {
+function checkIfLayersOverlap (layerA, layerB) {
   const a = layerA.frame
   const b = layerB.frame
   return !(

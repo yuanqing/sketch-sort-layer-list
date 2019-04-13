@@ -4,7 +4,9 @@ import {
   showSuccessMessage
 } from 'sketch-plugin-helper'
 
-export function sortLayers ({ sortLayers, successMessage }) {
+import updateLayerList from './update-layer-list'
+
+export default function sortLayersFactory ({ sortLayers, successMessage }) {
   return function () {
     const selectedLayers = getSelectedLayers()
     if (selectedLayers.length < 2) {
@@ -21,7 +23,7 @@ export function sortLayers ({ sortLayers, successMessage }) {
   }
 }
 
-export function areLayersInSameList ([firstLayer, ...layers]) {
+function areLayersInSameList ([firstLayer, ...layers]) {
   const firstLayerParent = firstLayer.parent
   return layers.reduce(function (result, layer) {
     if (!result) {
@@ -33,17 +35,4 @@ export function areLayersInSameList ([firstLayer, ...layers]) {
     }
     return parent.id && parent.id === firstLayerParent.id
   }, true)
-}
-
-export function updateLayerList ({sortedLayers, shouldSelectLayers}) {
-  const firstLayer = sortedLayers[0]
-  const parent = firstLayer.sketchObject.parentGroup()
-  const temporaryLayer = MSLayer.alloc().init()
-  parent.insertLayer_beforeLayer(temporaryLayer, firstLayer.sketchObject)
-  sortedLayers.reverse().forEach(function (layer) {
-    const layerSketchObject = layer.sketchObject
-    layerSketchObject.moveToLayer_beforeLayer(parent, temporaryLayer)
-    layer.selected = shouldSelectLayers
-  })
-  temporaryLayer.removeFromParent()
 }
