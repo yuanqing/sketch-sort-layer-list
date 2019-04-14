@@ -1,4 +1,4 @@
-export default function updateLayerList ({sortedLayers, shouldSelectLayers}) {
+export default function updateLayerList ({ sortedLayers, shouldSelectLayers }) {
   const firstLayer = sortedLayers[0]
   const parent = firstLayer.sketchObject.parentGroup()
   const temporaryLayer = MSLayer.alloc().init()

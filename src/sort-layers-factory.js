@@ -18,7 +18,7 @@ export default function sortLayersFactory ({ sortLayers, successMessage }) {
       return
     }
     const sortedLayers = sortLayers(selectedLayers)
-    updateLayerList({sortedLayers, shouldSelectLayers: true})
+    updateLayerList({ sortedLayers, shouldSelectLayers: true })
     showSuccessMessage(successMessage)
   }
 }
