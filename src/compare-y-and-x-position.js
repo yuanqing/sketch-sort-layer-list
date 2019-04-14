@@ -1,4 +1,4 @@
-export function compareYandXposition (layerA, layerB) {
+export default function compareYandXposition (layerA, layerB) {
   const a = layerA.frame
   const b = layerB.frame
   const yPositionDifference = a.y - b.y

@@ -1,4 +1,4 @@
-import { compareYandXposition } from '../compare-y-and-x-position'
+import compareYandXposition from '../compare-y-and-x-position'
 import sortLayersFactory from '../sort-layers-factory'
 
 export default sortLayersFactory({
