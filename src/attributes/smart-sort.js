@@ -7,22 +7,22 @@ export default sortLayersFactory({
 })
 
 export function smartSort ([firstLayer, ...layers]) {
-  const results = [firstLayer]
+  const result = [firstLayer]
   layers.forEach(function (layer) {
-    let i = results.length
+    let i = result.length
     while (i-- > 0) {
-      const resultsLayer = results[i]
+      const resultLayer = result[i]
       if (
-        checkIfLayersOverlap(layer, resultsLayer) ||
-        compareYandXposition(layer, resultsLayer) > 0
+        checkIfLayersOverlap(layer, resultLayer) ||
+        compareYandXposition(layer, resultLayer) > 0
       ) {
-        results.splice(i + 1, 0, layer)
+        result.splice(i + 1, 0, layer)
         return
       }
     }
-    results.splice(0, 0, layer)
+    result.splice(0, 0, layer)
   })
-  return results
+  return result
 }
 
 function checkIfLayersOverlap (layerA, layerB) {
