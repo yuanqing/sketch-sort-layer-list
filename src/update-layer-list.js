@@ -4,8 +4,7 @@ export default function updateLayerList ({ sortedLayers, shouldSelectLayers }) {
   const temporaryLayer = MSLayer.alloc().init()
   parent.insertLayer_beforeLayer(temporaryLayer, firstLayer.sketchObject)
   sortedLayers.reverse().forEach(function (layer) {
-    const layerSketchObject = layer.sketchObject
-    layerSketchObject.moveToLayer_beforeLayer(parent, temporaryLayer)
+    layer.sketchObject.moveToLayer_beforeLayer(parent, temporaryLayer)
     layer.selected = shouldSelectLayers
   })
   temporaryLayer.removeFromParent()
