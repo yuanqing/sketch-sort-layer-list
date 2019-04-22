@@ -6,7 +6,7 @@
 
 ### Sort Selected Layers By Name
 
-- Layers are sorted by their [natural sort order](https://blog.codinghorror.com/sorting-for-humans-natural-sort-order/)
+- Layers are sorted in alphabetical order
 
 ### Sort Selected Layers By Layer Position
 
