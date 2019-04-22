@@ -6,6 +6,11 @@
     <description>A Sketch plugin for sorting the layer list by name or layer position</description>
     <language>en</language>
     <item>
+      <title>v0.3.0</title>
+      <description>0.3.0</description>
+      <enclosure url="https://github.com/yuanqing/sketch-sort-layer-list/archive/v0.3.0.zip" sparkle:version="0.3.0"/>
+    </item>
+    <item>
       <title>v0.2.3</title>
       <description>0.2.3</description>
       <enclosure url="https://github.com/yuanqing/sketch-sort-layer-list/archive/v0.2.3.zip" sparkle:version="0.2.3"/>

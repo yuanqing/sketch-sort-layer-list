@@ -3,7 +3,7 @@
   "description": "A Sketch plugin for sorting the layer list by name or layer position",
   "author": "Lim Yuan Qing",
   "homepage": "https://github.com/yuanqing/sketch-sort-layer-list",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "identifier": "yuanqing.sketch-sort-layer-list",
   "appcast": "https://raw.githubusercontent.com/yuanqing/sketch-sort-layer-list/master/appcast.xml",
   "bundleVersion": 1,
