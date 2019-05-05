@@ -10,12 +10,6 @@
   "license": "MIT",
   "author": "Lim Yuan Qing",
   "repository": "yuanqing/sketch-sort-layer-list",
-  "dependencies": {
-    "natural-compare-lite": "1.4.0"
-  },
-  "devDependencies": {
-    "sketch-plugin-helper": "*"
-  },
   "scripts": {
     "build": "sph build",
     "fix": "sph lint --fix",
@@ -24,6 +18,12 @@
     "unlink": "sph symlink --delete",
     "version": "sph version",
     "watch": "sph build --watch"
+  },
+  "dependencies": {
+    "natural-compare-lite": "^1.4.0"
+  },
+  "devDependencies": {
+    "sketch-plugin-helper": "*"
   },
   "sketch-plugin-helper": {
     "name": "Sort Layer List",
