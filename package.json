@@ -1,6 +1,6 @@
 {
   "name": "sketch-sort-layer-list",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A Sketch plugin for sorting the layer list by name or layer position",
   "keywords": [
     "plugin",
