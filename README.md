@@ -2,6 +2,8 @@
 
 > A Sketch plugin for sorting the layer list by name or layer position
 
+![Sort Selected Layers By Name](media/sort-selected-layers-by-name.gif)
+
 ## Commands
 
 ### Sort Selected Layers By Name
@@ -17,7 +19,7 @@
 
 ### Smart Sort
 
-- Sorts layers by their Y and X position, but preserves the layers’ visual “stack order”
+- Sorts layers by their Y and X position, but preserves the layers’ visual “stack order” on the page
 
 ## Installation
 
