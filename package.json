@@ -14,13 +14,16 @@
     "src"
   ],
   "scripts": {
-    "build": "sph build",
-    "fix": "sph lint --fix",
-    "lint": "sph lint",
-    "symlink": "sph symlink",
-    "unlink": "sph symlink --delete",
-    "version": "sph version",
-    "watch": "sph build --watch"
+    "build": "sketch build",
+    "fix": "sketch lint --fix",
+    "handler": "sketch handler",
+    "lint": "sketch lint",
+    "script": "sketch script",
+    "symlink": "sketch symlink",
+    "test": "sketch test",
+    "unlink": "sketch symlink --delete",
+    "version": "sketch version",
+    "watch": "sketch build --watch"
   },
   "dependencies": {
     "natural-compare-lite": "^1.4.0"
@@ -33,25 +36,25 @@
     "menu": [
       {
         "handler": "attributes/name",
-        "label": "Sort Selected Layers By Name"
+        "name": "Sort Selected Layers By Name"
       },
       "-",
       {
         "handler": "attributes/x-position",
-        "label": "Sort Selected Layers By X Position"
+        "name": "Sort Selected Layers By X Position"
       },
       {
         "handler": "attributes/y-position",
-        "label": "Sort Selected Layers By Y Position"
+        "name": "Sort Selected Layers By Y Position"
       },
       {
         "handler": "attributes/y-and-x-position",
-        "label": "Sort Selected Layers By Y and X Position"
+        "name": "Sort Selected Layers By Y and X Position"
       },
       "-",
       {
         "handler": "attributes/smart-sort",
-        "label": "Smart Sort"
+        "name": "Smart Sort"
       }
     ]
   }
