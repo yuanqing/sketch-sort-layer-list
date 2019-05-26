@@ -1,6 +1,6 @@
 # Sort Layer List [![npm Version](https://badgen.net/npm/v/sketch-sort-layer-list)](https://www.npmjs.org/package/sketch-sort-layer-list)
 
-> A Sketch plugin for sorting the layer list by name or layer position
+> A Sketch plugin to sort the layer list by name or layer position
 
 ![Sort Selected Layers By Name](media/sort-selected-layers-by-name.gif)
 
