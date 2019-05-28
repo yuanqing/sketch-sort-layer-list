@@ -29,9 +29,9 @@ function checkIfLayersOverlap (layerA, layerB) {
   const a = layerA.frame
   const b = layerB.frame
   return !(
-    a.x + a.width < b.x ||
-    b.x + b.width < a.x ||
-    a.y + a.height < b.y ||
-    b.y + b.height < a.y
+    a.x + a.width <= b.x ||
+    b.x + b.width <= a.x ||
+    a.y + a.height <= b.y ||
+    b.y + b.height <= a.y
   )
 }
